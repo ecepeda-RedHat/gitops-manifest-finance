@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: terms-web
+spec:
+    ports:S
+      - port: 8080
+        targetPort: 8080
+    selector:
+      app: terms-web
