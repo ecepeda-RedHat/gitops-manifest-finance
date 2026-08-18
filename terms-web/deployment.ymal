@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: terms-web
+    labels:
+      app: terms-web
+spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: terms-web
+    template:
+      metadata:
+        labels:
+          app: terms-web
+      spec:
+        containers:
+          - name: terms-web
+            image: image-registry.openshift-image-registry.svc:5000/finance/terms-web:latest
+            ports:
+              - containerPort: 8080
