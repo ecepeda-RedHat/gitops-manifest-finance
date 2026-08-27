@@ -16,6 +16,6 @@ spec:
       spec:
         containers:
           - name: terms-web
-            image: image-registry.openshift-image-registry.svc:5000/finance/terms-web:latest
+            image: image-registry.openshift-image-registry.svc:5000/demo-cicd/terms-web:latest
             ports:
               - containerPort: 8080
